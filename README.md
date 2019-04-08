@@ -25,7 +25,7 @@ Use the component's in the HTML page:
 <myuw-help-link
   app-context="Payroll"
   url="https://uwservice.wisc.edu/help/payroll">
-</myuw-help>
+</myuw-help-link>
 ```
 
 #### app-context attribute
