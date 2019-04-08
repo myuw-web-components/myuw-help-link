@@ -1,0 +1,38 @@
+{
+  "name": "@myuw-web-components/myuw-help-link",
+  "version": "0.0.1",
+  "description": "Stylized hyperlink to help content.",
+  "module": "dist/myuw-help-link.min.mjs",
+  "browser": "dist/myuw-help-link.min.js",
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
+    "serve": "live-server",
+    "start": "run-p watch serve",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myuw-web-components/myuw-help-link.git"
+  },
+  "author": "Board of Regents of the University of Wisconsin System",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/myuw-web-components/myuw-help-link/issues"
+  },
+  "homepage": "https://github.com/myuw-web-components/myuw-help-link",
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "live-server": "^1.2.1",
+    "npm-run-all": "^4.1.5",
+    "rollup": "^1.9.0",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-html": "^0.2.1",
+    "rollup-plugin-minify-es": "^1.1.1",
+    "tota11y": "^0.1.6"
+  },
+  "files": [
+    "dist"
+  ]
+}
