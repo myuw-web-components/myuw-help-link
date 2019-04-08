@@ -56,3 +56,4 @@ MyUWHelpLink.template = (function template(src) {
   return template;
 })(tpl);
 
+window.customElements.define('myuw-help-link', MyUWHelpLink);
