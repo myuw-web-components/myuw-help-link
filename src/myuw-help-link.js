@@ -52,6 +52,8 @@ class MyUWHelpLink extends HTMLElement {
 
     this.shadowRoot.getElementById('help-link').appendChild(materialLaunchIcon);
 
+    this.shadowRoot.getElementById('help-link').setAttribute(
+      "href", this['url']);
   }
 }
 
