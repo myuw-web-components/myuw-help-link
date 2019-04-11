@@ -44,9 +44,14 @@ class MyUWHelpLink extends HTMLElement {
   * Update the component state
   */
   updateComponent() {
+
+    var materialLaunchIcon = this.shadowRoot.getElementById('launch-icon');
+
     this.shadowRoot.getElementById('help-link').innerHTML =
-      this['app-context'] + " help and resources";
-    this.shadowRoot.getElementById('help-link')[href] = this['url'];
+      this['app-context'] + " help and resources ";
+
+    this.shadowRoot.getElementById('help-link').appendChild(materialLaunchIcon);
+
   }
 }
 
