@@ -38,5 +38,6 @@ The `app-context` attribute clarifies the scope and context of the help linked.
 #### url
 
 The `url` attribute tells the web component where the link should take the user.
-Host-relative links open in the same tab; absolute links open in a new tab (via
-`rel='noopener noreferrer'`).
+
+TODO: Eventually, host-relative links open in the same tab; absolute links open
+in a new tab (via `rel='noopener noreferrer'`).
