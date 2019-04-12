@@ -1,6 +1,6 @@
 {
   "name": "@myuw-web-components/myuw-help-link",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Stylized hyperlink to help content.",
   "module": "dist/myuw-help-link.min.mjs",
   "browser": "dist/myuw-help-link.min.js",
