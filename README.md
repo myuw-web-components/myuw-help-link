@@ -32,8 +32,9 @@ Use the component's in the HTML page:
 
 The `app-context` attribute clarifies the scope and context of the help linked.
 
-`myuw-help-link` uses it to compose the link label, as
-`{app-context} resources and help`.
+Implementation detail: `myuw-help-link` uses it to compose the link label, as
+`{app-context} resources and help`. (This is an implementation detail, not a
+guarantee of the API exposed by `myuw-help-link`).
 
 #### url
 
