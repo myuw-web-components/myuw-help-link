@@ -39,6 +39,9 @@ In HTML `<head>`,
 
 to import via unpkg.
 
+WARNING: unpkg is a third-party service neither provided nor endorsed by MyUW.
+In a MyUW context, sourcing from `/static` is preferred.
+
 #### Redistribute with the downstream app
 
 Alternatively include the web component files locally in the application and
