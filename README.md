@@ -4,6 +4,11 @@ This Web Component presents a stylized link to help.
 
 ## Using
 
+To use the `myuw-help-link` web component,
+
+1. Make it available in the HTML page by invoking suitable `<script>`, and
+2. Use it via the `<myuw-help-link>` element.
+
 ### Import the web component
 
 #### In MyUW
