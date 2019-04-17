@@ -1,7 +1,5 @@
 # myuw-help-link
 
-**NOTE: this README is aspirational rather than describing current reality.**
-
 This Web Component presents a stylized link to help.
 
 ## Using
