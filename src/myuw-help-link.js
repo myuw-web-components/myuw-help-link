@@ -54,6 +54,13 @@ class MyUWHelpLink extends HTMLElement {
 
     this.shadowRoot.getElementById('help-link').setAttribute(
       "href", this['url']);
+
+    if (this['url'].startsWith("http")) {
+      this.shadowRoot.getElementById('help-link').setAttribute(
+        "rel", "noopener noreferrer");
+      this.shadowRoot.getElementById('help-link').setAttribute(
+        "target", "_blank");
+    }
   }
 }
 
