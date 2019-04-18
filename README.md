@@ -114,7 +114,7 @@ and capture the `/dist/` outputs to [myuw-shared-static][].
 
 ### Oh no that release wasn't backwards-compatible
 
-Immediately cut a follow-on release that restores compatibility.
+Immediately release a new PATCH version that restores compatibility.
 
 [documentation about myuw-help-link in static]: https://git.doit.wisc.edu/myuw/myuw-shared-static/tree/master/src/main/webapp/web-components/myuw/myuw-help-link
 [myuw-shared-static]: https://git.doit.wisc.edu/myuw/myuw-shared-static/tree/master/src/main/webapp/web-components/myuw/myuw-help-link
