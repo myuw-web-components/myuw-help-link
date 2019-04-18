@@ -73,4 +73,48 @@ The `url` attribute tells the web component where the link should take the user.
 Absolute links (starting with `http`) open in a new tab (via `target='_blank'`
 with the page-jacking-prevention workaround of `rel='noopener noreferrer'`).
 
+## Developing
+
+### Practice Semantic Versioning
+
+Carefully practicing Semantic Versioning allows downstream applications making
+use of `myuw-help-link` to automatically, transparently upgrade to the latest
+compatible version of the component.
+
+If a change is not backwards-compatible, it MUST yield a MAJOR version number
+bump, e.g. from 1.1.12 to 2.0.0.
+
+### Keep a changelog
+
+Update `CHANGELOG.md` to document the changes. This is useful documentation, and
+it's also a prompt to think about the nature of the changes and to ensure that
+they are backwards-compatible.
+
+### Locally testing
+
+```shell
+npm install
+npm start
+```
+
+Visit <http://127.0.0.1:8080/docs/> .
+
+### Releasing aka Publishing
+
+**First**, update `package.json` to reflect the version number you intend to
+release.
+
+Then
+
+```shell
+npm publish --public
+```
+
+and capture the `/dist/` outputs to [myuw-shared-static][].
+
+### Oh no that release wasn't backwards-compatible
+
+Immediately release a new PATCH version that restores compatibility.
+
 [documentation about myuw-help-link in static]: https://git.doit.wisc.edu/myuw/myuw-shared-static/tree/master/src/main/webapp/web-components/myuw/myuw-help-link
+[myuw-shared-static]: https://git.doit.wisc.edu/myuw/myuw-shared-static/tree/master/src/main/webapp/web-components/myuw/myuw-help-link
