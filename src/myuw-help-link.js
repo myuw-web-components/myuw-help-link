@@ -1,14 +1,12 @@
-import tpl from './myuw-help-link.html';
+import templateHtml from './myuw-help-link.html';
+
 class MyUWHelpLink extends HTMLElement {
 
   constructor() {
     super();
-
-    // Create a shadowroot for this element
     this.attachShadow({mode: 'open'});
-
-    // Append the custom HTML to the shadowroot
-    this.shadowRoot.appendChild(MyUWHelpLink.template.content.cloneNode(true));
+    this.shadowRoot.appendChild(this.constructor.template.content.cloneNode(true));
+    this.helpLinkElement = this.shadowRoot.getElementById('help-link');
   }
 
   static get observedAttributes() {
@@ -16,6 +14,14 @@ class MyUWHelpLink extends HTMLElement {
       'app-context',
       'url'
     ];
+  }
+
+  static get template() {
+    if (this._template === undefined) {
+      this._template = document.createElement('template');
+      this._template.innerHTML = templateHtml
+    }
+    return this._template;
   }
 
   /**
@@ -36,7 +42,6 @@ class MyUWHelpLink extends HTMLElement {
     // Get all attributes
     this['app-context'] = this.getAttribute('app-context');
     this['url']         = this.getAttribute('url');
-
     this.$link = this.shadowRoot.getElementById('help-link');
   }
 
@@ -44,30 +49,16 @@ class MyUWHelpLink extends HTMLElement {
   * Update the component state
   */
   updateComponent() {
-
-    var materialLaunchIcon = this.shadowRoot.getElementById('launch-icon');
-
-    this.shadowRoot.getElementById('help-link').innerHTML =
-      this['app-context'] + " help and resources ";
-
-    this.shadowRoot.getElementById('help-link').appendChild(materialLaunchIcon);
-
-    this.shadowRoot.getElementById('help-link').setAttribute(
-      "href", this['url']);
-
-    if (this['url'].startsWith("http")) {
-      this.shadowRoot.getElementById('help-link').setAttribute(
-        "rel", "noopener noreferrer");
-      this.shadowRoot.getElementById('help-link').setAttribute(
-        "target", "_blank");
+    const materialLaunchIcon = this.shadowRoot.getElementById('launch-icon');
+    this.helpLinkElement.innerHTML = this['app-context'] + " help and resources ";
+    this.helpLinkElement.appendChild(materialLaunchIcon);
+    this.helpLinkElement.setAttribute("href", this['url']);
+    if (this['url'] && this['url'].startsWith("http")) {
+      this.helpLinkElement.setAttribute("rel", "noopener noreferrer");
+      this.helpLinkElement.setAttribute("target", "_blank");
     }
   }
-}
 
-MyUWHelpLink.template = (function template(src) {
-  const template = (document.createElement('template'));
-  template.innerHTML = src;
-  return template;
-})(tpl);
+}
 
 window.customElements.define('myuw-help-link', MyUWHelpLink);
