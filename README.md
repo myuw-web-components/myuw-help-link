@@ -1,5 +1,7 @@
 # myuw-help-link
 
+**`myuw-help-link` is not currently maintained.**
+
 This Web Component presents a stylized link to help.
 
 ## Getting Started
